@@ -7,24 +7,34 @@
 .flex-container {
   display: flex;
   flex-flow: row nowrap;
+  justify-content: center;
+  /* align-items: center; */
   border: 1px solid #000;
   border-radius: 5px;
   width: 80%;
-  margin: 0 auto;
+  height: 70vh;
+  /* margin: 0 auto; */
 }
 
 .col-1 {
   display: flex;
   flex-flow: column wrap;
+  justify-content: space-between;
+  padding: 2rem 3rem;
 }
 
 .box {
   display: flex;
   flex-flow: row nowrap;
+  justify-content: space-around;
 }
 
-img {
+.col-2, img {
   max-width: 100%;
   padding: 0;
   margin: 0;
+}
+
+.text {
+  font-size: 15px;
 }
