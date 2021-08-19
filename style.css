@@ -1,3 +1,9 @@
+:root {
+  --main-background: hsl(233, 47%, 7%);
+  --card-background: hsl(244, 38%, 16%);
+  --accent: hsl(277, 64%, 61%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +20,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--main-background);
+}
+
+mark {
+  color: var(--accent);
+  background-color: unset;
 }
 
 .flex-container {
@@ -22,8 +34,11 @@ body {
   justify-content: center;
   border: 1px solid #000;
   border-radius: 5px;
-  width: 80%;
+  /* width: 85%; */
+  max-width: 1200px;
   height: 70vh;
+  background-color: var(--card-background);
+  color: white;
 }
 
 .col-1 {
@@ -43,6 +58,8 @@ body {
 .col-2 {
   flex: 1;
   overflow: hidden;
+  /* margin: 0;
+  padding: 0; */
 }
 
 img {
