@@ -4,6 +4,7 @@
   --accent: hsl(277, 64%, 61%);
   --main-heading: hsl(0, 0%, 100%);
   --main-paragraph: hsla(0, 0%, 100%, 0.75);
+  font-size: calc(1vw + 1vh + 0.5vmin);
 }
 
 * {
@@ -23,7 +24,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--main-background);
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: "Lexend Deca", sans-serif;
 }
 
 mark {
@@ -31,19 +32,19 @@ mark {
   background-color: unset;
 }
 
-h1, strong {
+h1,
+strong {
   color: var(--main-heading);
 }
-
 
 .flex-container {
   display: flex;
   flex-flow: column nowrap;
   /* justify-content: center;
   align-items: center; */
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   border-radius: 5px;
-  width: 654px;
+  /* width: 654px; */
   /* height: 60rem; */
   /* width: 85%; */
   /* max-width: 1200px; */
@@ -55,17 +56,18 @@ h1, strong {
 .col-1 {
   display: flex;
   flex-flow: column wrap;
-  /* justify-content: center; */
-  padding: 2rem;
+  justify-content: center;
+  /* align-items: center; */
+  /* padding: 2rem; */
   /* flex: 1; */
   order: 2;
 }
 
-.box {
+/* .box {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
-}
+} */
 
 .col-2 {
   /* flex: 1; */
@@ -89,14 +91,31 @@ img {
 
 .box {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   /* justify-content: space-around; */
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1000px) {
+  body {
+    align-items: unset;
+    /* max-width: 375px; */
+  }
+
+  .flex-container {
+    max-width: 300px;
+    border-radius: 5px;
+    margin: 100px 0;
+    /* padding: 10px ; */
+  }
+
   .col-1 {
+    justify-content: space-between;
     justify-content: center;
     align-items: center;
+  }
+
+  strong {
+    font-size: 3em;
   }
 }
 
@@ -107,10 +126,11 @@ img {
     border: 1px solid #000;
     border-radius: 5px;
     width: 85%;
-    /* max-width: 1200px; */
+    max-width: 1200px;
+    max-height: 638px;
     /* height: 466px; */
     /* max-height: 466px; */
-    /* height: 70vh; */
+    height: 70vh;
     background-color: var(--card-background);
     color: white;
     /* padding: 2rem; */
@@ -119,8 +139,8 @@ img {
   .col-1 {
     display: flex;
     flex-flow: column nowrap;
-    /* justify-content: space-between; */
-    /* padding: 2rem; */
+    justify-content: space-between;
+    padding: 2rem;
     flex: 1;
     order: 1;
   }
@@ -137,6 +157,8 @@ img {
     flex: 1;
     overflow: hidden;
     order: 2;
+    width: 540px;
+    /* flex-basis: 540px; */
     /* margin: 0;
     padding: 0; */
   }
