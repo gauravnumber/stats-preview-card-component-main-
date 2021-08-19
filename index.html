@@ -9,6 +9,12 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="style.css" />
 
@@ -17,7 +23,9 @@
   <body>
     <main class="flex-container">
       <div class="col-1">
-        <header><h1>Get <mark>insights</mark> that help your business grow.</h1></header>
+        <header>
+          <h1>Get <mark>insights</mark> that help your business grow.</h1>
+        </header>
 
         <div class="text">
           Discover the benefits of data analytics and make better decisions
@@ -40,7 +48,15 @@
         </div>
       </div>
       <div class="col-2">
-        <img src="./images/image-header-desktop.jpg" alt="Desktop Image" />
+        <img
+          srcset="
+            ./images/image-header-mobile.jpg   375w,
+            ./images/image-header-desktop.jpg 1440w
+          "
+          sizes="(max-width: 375px) 375px, 1440px"
+          src="./images/image-header-desktop.jpg"
+          alt="Desktop Image"
+        />
       </div>
     </main>
   </body>
