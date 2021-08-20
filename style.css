@@ -16,7 +16,7 @@
 html,
 body {
   margin: 0;
-  height: 100%;
+  /* height: 100%; */
 }
 
 body {
@@ -40,10 +40,10 @@ strong {
 .flex-container {
   display: flex;
   flex-flow: column nowrap;
+  /* border-radius: 5px; */
   /* justify-content: center;
   align-items: center; */
   /* border: 1px solid #000; */
-  border-radius: 5px;
   /* width: 654px; */
   /* height: 60rem; */
   /* width: 85%; */
@@ -55,7 +55,7 @@ strong {
 
 .col-1 {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: center;
   /* align-items: center; */
   /* padding: 2rem; */
@@ -78,34 +78,71 @@ strong {
 }
 
 img {
-  width: 654px;
-  height: 480px;
+  width: 100%;
+  /* width: 654px;
+  height: 480px; */
   /* padding: 0;
   margin: 0; */
 }
 
 .text {
-  font-size: 15px;
+  /* font-size: 15px; */
   color: var(--main-paragraph);
 }
 
 .box {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   /* justify-content: space-around; */
 }
 
-@media screen and (max-width: 1000px) {
-  body {
+ /* Mobile */
+@media screen and (max-width: 2000px) {
+  p {
+    color: var(--main-paragraph);
+    font-size: 15px;
+    margin: 16px auto 40px auto;
+    width: 80%;
+  }  
+
+  h1 {
+    padding-top: 24px;
+    width: 80%;
+    font-size: 28px;
+    margin: 16px auto 0 auto;
+  }
+
+  .box {
+    padding: 0;
+    align-items: center;
+  }
+
+  .box-item {
+    /* width: 100%; */
+    width: 80px;
+    margin-bottom: 24px;
+  }
+
+  .box-item  .text {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 2px;
+    color: var(--main-paragraph);
+  }
+
+  .box-item strong {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  /* body {
     align-items: unset;
-    /* max-width: 375px; */
   }
 
   .flex-container {
     max-width: 300px;
     border-radius: 5px;
     margin: 100px 0;
-    /* padding: 10px ; */
   }
 
   .col-1 {
@@ -116,10 +153,11 @@ img {
 
   strong {
     font-size: 3em;
-  }
+  } */
 }
 
-@media screen and (min-width: 1000px) {
+/* Desktop */
+@media screen and (min-width: 2000px) {
   .flex-container {
     flex-flow: row nowrap;
     justify-content: center;
